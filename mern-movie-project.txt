@@ -1,0 +1,115 @@
+MERN-movie-project
+│
+├── client
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
+├── server
+│   ├── server.js
+│   └── package.json
+│
+└── README.md
+
+1.client
+
+index.html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>MERN Movie Project</h1>
+
+    <div class="movie">
+        <h2>KGF</h2>
+        <p>Action Movie</p>
+    </div>
+
+    <div class="movie">
+        <h2>Leo</h2>
+        <p>Thriller Movie</p>
+    </div>
+
+    <div class="movie">
+        <h2>RRR</h2>
+        <p>Historical Action Movie</p>
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+style.css
+
+body {
+    font-family: Arial;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+h1 {
+    color: darkblue;
+}
+
+.movie {
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+
+script.js
+
+console.log("Movie Project Running");
+
+2.server
+
+const express = require('express');
+
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('Movie Server Running');
+});
+
+app.listen(5000, () => {
+    console.log('Server running on port 5000');
+});
+
+package.json
+
+{
+  "name": "movie-server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
+
+7.READEME.md
+
+# MERN Movie Project
+
+## Description
+This is a simple MERN Movie Project created for SDP workshop.
+
+## Features
+- Display movie list
+- Simple UI
+- Node.js server
+
+## Technologies Used
+- MongoDB
+- Express.js
+- React.js
+- Node.js
